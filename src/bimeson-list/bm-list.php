@@ -6,7 +6,7 @@ namespace st;
  * Bimeson (Admin)
  *
  * @author Takuto Yanagida @ Space-Time Inc.
- * @version 2018-10-23
+ * @version 2020-06-08
  *
  */
 
@@ -68,7 +68,7 @@ class Bimeson_List {
 		if ( $url_to === false ) $url_to = \st\get_file_uri( __DIR__ );
 		$url_to = untrailingslashit( $url_to );
 
-		\st\media_picker\enqueue_script_for_admin( $url_to . '/../../stinc/admin/' );
+		\st\media_picker\enqueue_script( $url_to . '/../../stinc/admin/' );
 		wp_enqueue_style(  self::NS, $url_to . '/asset/bm-list.min.css' );
 		wp_enqueue_script( self::NS, $url_to . '/asset/bm-list.min.js' );
 		wp_enqueue_script( 'xlsx', $url_to . '/asset/xlsx.full.min.js' );
