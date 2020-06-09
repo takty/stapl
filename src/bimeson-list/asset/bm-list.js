@@ -203,7 +203,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	function stripUnnecessarySpan(str) {
-		// return str.replace(/<\/?span("[^"]*"|'[^']*'|[^'">])*>/g, '');
 		str = str.replace(/<span +([^>]*)>/gi, (m, p1) => {
 			const as = p1.trim().toLowerCase().match(/style *= *"([^"]*)"/);
 			if (as && as.length === 2) {
