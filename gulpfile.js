@@ -29,7 +29,7 @@ gulp.task('sass', () => {
 				this.emit('end');
 			}
 		}))
-		.pipe($.sass({ outputStyle: 'compressed' }))
+		.pipe($.dartSass({ outputStyle: 'compressed' }))
 		.pipe($.autoprefixer({ remove: false }))
 		.pipe($.rename({ extname: '.min.css' }))
 		.pipe(gulp.dest('dist', { sourcemaps: '.' }));
